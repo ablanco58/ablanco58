@@ -1,4 +1,4 @@
-<a href="https://github.com/ablanco58/TrooperCraft"><img align="right" src="./assets/helmet-spin.gif" width="240" height="240" alt="Casco de stormtrooper con franja azul girando en 3D" /></a>
+<a href="https://sketchfab.com/3d-models/star-wars-stormtrooper-helmet-1e906433aecd4fab9c298e6c325a42ac"><img align="right" src="./assets/stormtrooper-freddan755.gif" width="240" height="240" alt="Star Wars Stormtrooper Helmet de Freddan755 girando en 3D" /></a>
 
 ### Hey, soy Alejandro 👾
 
@@ -46,3 +46,5 @@ También conservo [MyFirstWeb](https://github.com/ablanco58/MyFirstWeb): parte d
 
 **Alejandro Blanco** · [@ablanco58](https://github.com/ablanco58)<br>
 Si algo de lo que estoy construyendo te interesa, nos vemos en los repos.
+
+<sub>Casco 3D: <a href="https://sketchfab.com/Freddan755">Freddan755</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Animación e iluminación adaptadas para este perfil.</sub>

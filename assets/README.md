@@ -1,36 +1,38 @@
 # Casco 3D del perfil
 
-Casco de stormtrooper modelado a partir de la referencia frontal aportada por el
-usuario. Incluye pintura marfil con desgaste sutil, franja azul asimétrica, lentes
-negras, banda del domo, mejillas, respirador y filtros con rejilla. El volumen de
-los laterales y la parte posterior es una interpretación modelada de la referencia.
+El perfil utiliza **Star Wars Stormtrooper Helmet**, de
+[Freddan755](https://sketchfab.com/Freddan755), con licencia
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-La geometría gira 360 grados sobre su eje vertical con cámara e iluminación fijas.
+La geometría y los materiales son los del modelo original. Para esta presentación
+se han añadido encuadre, luces de estudio y una rotación de 360 grados, renderizada
+como GIF con fondo transparente.
 
-- `helmet-spin.gif`: animación transparente de 400 × 400 píxeles, 72 fotogramas,
-  un giro completo cada 3 segundos y repetición continua. Es el casco del README.
-- `helmet-blue-stripe.blend`: modelo editable, materiales, luces, cámara y animación.
-- `../scripts/render_helmet.py`: geometría y pintura procedural; la franja azul se
-  mantiene unida al volumen durante el giro.
-- `../scripts/build_stormtrooper_gif.py`: ensamblador de GIF compartido, con paleta
-  común y limpieza entre fotogramas para evitar estelas.
+## Archivos
 
-El modelo completo anterior y su script se conservan como una variante; el perfil
-utiliza el nuevo casco.
+- `stormtrooper-freddan755.gif`: animación del perfil, 400 × 400 píxeles,
+  72 fotogramas, tres segundos por vuelta y repetición continua.
+- `vendor/freddan755/stormtrooper-helmet.glb`: modelo del autor, sin modificar.
+- [Créditos, licencia, procedencia y checksum](vendor/freddan755/ATTRIBUTION.md).
+- `../scripts/render_artist_helmet.py`: importación y render en Blender.
+- `../scripts/build_stormtrooper_gif.py`: ensamblado con paleta común y limpieza
+  de los fotogramas para evitar estelas.
 
-## Regenerar
+Los modelos procedurales anteriores se conservan como archivos históricos y no
+son los que se muestran en el perfil.
 
-Entorno utilizado: Blender 4.0.2, Python 3 y Pillow.
+## Regenerar la animación
 
-```bash
-blender -b --factory-startup --python-exit-code 1 --python scripts/render_helmet.py -- --animate
-python3 scripts/build_stormtrooper_gif.py --source helmet --name helmet-spin.gif
-```
-
-Para una imagen de prueba:
+Entorno utilizado: Blender 4.0.2 con Python 3.12, NumPy 1.26.4 y Pillow.
+El importador glTF de Blender necesita NumPy. El script busca esa dependencia
+en `.render-deps/`, carpeta excluida del repositorio:
 
 ```bash
-blender -b --factory-startup --python-exit-code 1 --python scripts/render_helmet.py -- --preview
+python3 -m pip install --target .render-deps numpy==1.26.4
+blender -b --factory-startup --python-exit-code 1 --python scripts/render_artist_helmet.py -- --animate
+python3 scripts/build_stormtrooper_gif.py --source artist-helmet --name stormtrooper-freddan755.gif
 ```
 
-Los PNG intermedios se guardan en `output/helmet/`, fuera del control de versiones.
+El último comando necesita Pillow disponible en el Python que lo ejecuta.
+Para renderizar una sola vista, sustituye `--animate` por `--preview`.
+Los PNG intermedios quedan en `output/artist-helmet/`, fuera del control de versiones.
