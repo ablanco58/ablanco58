@@ -1,3 +1,5 @@
+<a href="https://github.com/ablanco58/TrooperCraft"><img align="right" src="./assets/stormtrooper-spin.gif" width="240" height="240" alt="Stormtrooper 3D girando 360 grados" /></a>
+
 ### Hey, soy Alejandro 👾
 
 Construyo **webs, automatizaciones y herramientas que resuelven problemas reales**.
@@ -7,6 +9,8 @@ Un día estoy conectando n8n con WhatsApp. Otro, haciendo que Minecraft tenga st
 🌐 Desarrollo proyectos web con **Quiel Studio**.<br>
 ⚙️ Automatizo procesos con **n8n, Docker, WhatsApp y correo**.<br>
 🧱 Creo **TrooperCraft**, mi proyecto de mods para Minecraft en Java.
+
+<br clear="both" />
 
 #### ⚡ Mi actividad
 
