@@ -1,4 +1,4 @@
-<a href="https://github.com/ablanco58/TrooperCraft"><img align="right" src="./assets/stormtrooper-spin.gif" width="240" height="240" alt="Stormtrooper 3D girando 360 grados" /></a>
+<a href="https://github.com/ablanco58/TrooperCraft"><img align="right" src="./assets/helmet-spin.gif" width="240" height="240" alt="Casco de stormtrooper con franja azul girando en 3D" /></a>
 
 ### Hey, soy Alejandro 👾
 

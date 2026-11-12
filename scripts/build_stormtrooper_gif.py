@@ -3,10 +3,15 @@
 Requiere Pillow: python -m pip install pillow
 """
 from pathlib import Path
+import argparse
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-frames = sorted((ROOT / 'output' / 'stormtrooper').glob('frame-*.png'))
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--source', default='stormtrooper')
+parser.add_argument('--name', default='stormtrooper-spin.gif')
+options = parser.parse_args()
+frames = sorted((ROOT / 'output' / options.source).glob('frame-*.png'))
 if len(frames) != 72:
     raise SystemExit(f'Se necesitan 72 fotogramas. Encontrados: {len(frames)}')
 
@@ -31,7 +36,7 @@ for index, file in enumerate(frames):
         images.append(frame)
     durations.append(round((index + 1) * 100 / 24) * 10 - round(index * 100 / 24) * 10)
 
-target = ROOT / 'assets' / 'stormtrooper-spin.gif'
+target = ROOT / 'assets' / options.name
 target.parent.mkdir(exist_ok=True)
 images[0].save(target, save_all=True, append_images=images[1:], duration=durations,
     loop=0, disposal=2, transparency=255, background=255, optimize=False)
