@@ -15,7 +15,7 @@ Un día estoy conectando n8n con WhatsApp. Otro, haciendo que Minecraft tenga st
 #### ⚡ Mi actividad
 
 <!-- PUBLIC-STATS:START -->
-En GitHub desde **2025** · **5 proyectos públicos** · **4 lenguajes** en mis repositorios.
+En GitHub desde **2025** · **6 proyectos públicos** · **5 lenguajes** en mis repositorios.
 <!-- PUBLIC-STATS:END -->
 
 #### 🌀 Proyectos
